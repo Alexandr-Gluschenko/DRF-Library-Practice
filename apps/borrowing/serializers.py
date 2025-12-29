@@ -1,0 +1,9 @@
+from rest_framework import serializers
+from apps.borrowing.models import Borrowing
+
+
+class BorrowingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Borrowing
+        fields = '__all__'
+        read_only_fields = ('id',)
