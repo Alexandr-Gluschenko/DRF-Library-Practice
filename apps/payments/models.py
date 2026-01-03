@@ -1,11 +1,13 @@
 from django.db import models
 
 from apps.borrowing.models import Borrowing
+from apps.users.models import User
 
 
 # Create your models here.
 class Payment(models.Model):
-    status = models.BooleanField(default=False, choices=[
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="payments")
+    status = models.CharField(default=False, choices=[
         ("PENDING", "PAID"),
     ])
     type = models.CharField(max_length=10, choices=[
