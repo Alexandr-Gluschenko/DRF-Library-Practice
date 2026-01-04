@@ -27,7 +27,6 @@ load_dotenv.load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*4!j$dhhvfgw6__k42cnen9yy%uod^1ee_b0@glrupeq*qvf_r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
